@@ -1,0 +1,6 @@
+framework module Pods_Luni_App_Luni_AppUITests {
+  umbrella header "Pods-Luni_App-Luni_AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

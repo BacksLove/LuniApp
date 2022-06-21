@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1873846A2860B24000BADBD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187384692860B24000BADBD2 /* AppDelegate.swift */; };
+		1873846C2860B24000BADBD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873846B2860B24000BADBD2 /* SceneDelegate.swift */; };
+		1873846E2860B24000BADBD2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873846D2860B24000BADBD2 /* HomeViewController.swift */; };
+		187384712860B24000BADBD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1873846F2860B24000BADBD2 /* Main.storyboard */; };
+		187384732860B24400BADBD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187384722860B24400BADBD2 /* Assets.xcassets */; };
+		187384762860B24400BADBD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187384742860B24400BADBD2 /* LaunchScreen.storyboard */; };
+		187384812860B24500BADBD2 /* Luni_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187384802860B24500BADBD2 /* Luni_AppTests.swift */; };
+		1873848B2860B24500BADBD2 /* Luni_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873848A2860B24500BADBD2 /* Luni_AppUITests.swift */; };
+		1873848D2860B24500BADBD2 /* Luni_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873848C2860B24500BADBD2 /* Luni_AppUITestsLaunchTests.swift */; };
+		1873849D2860BEF900BADBD2 /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873849C2860BEF900BADBD2 /* PlusViewController.swift */; };
+		1873849F2860C51400BADBD2 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873849E2860C51400BADBD2 /* EmptyViewController.swift */; };
+		187384A128612F4600BADBD2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187384A028612F4600BADBD2 /* FavoriteViewController.swift */; };
+		187384A328614E3500BADBD2 /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187384A228614E3500BADBD2 /* Meditation.swift */; };
+		187384A528615B3F00BADBD2 /* FavoriteMeditations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187384A428615B3F00BADBD2 /* FavoriteMeditations.swift */; };
+		187384A92861EA7300BADBD2 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 187384A72861EA5800BADBD2 /* Gilroy-ExtraBold.otf */; };
+		187384AA2861EA7500BADBD2 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 187384A82861EA5800BADBD2 /* Gilroy-Light.otf */; };
+		1ECBB92A6C3A7412C1C5F0BA /* Pods_Luni_App_Luni_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A75B431EA247479545800A /* Pods_Luni_App_Luni_AppUITests.framework */; };
+		A3C369EA01FC50F4EEE76319 /* Pods_Luni_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8A747328FE1397874025ED /* Pods_Luni_AppTests.framework */; };
+		E3FAA185CC65BB4942DB4374 /* Pods_Luni_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56502C2F70312143B968A45 /* Pods_Luni_App.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1873847D2860B24500BADBD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1873845E2860B24000BADBD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 187384652860B24000BADBD2;
+			remoteInfo = Luni_App;
+		};
+		187384872860B24500BADBD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1873845E2860B24000BADBD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 187384652860B24000BADBD2;
+			remoteInfo = Luni_App;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C02DF96D3AD23DA081D1B /* Pods-Luni_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luni_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Luni_AppTests/Pods-Luni_AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		187384662860B24000BADBD2 /* Luni_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luni_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		187384692860B24000BADBD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1873846B2860B24000BADBD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1873846D2860B24000BADBD2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		187384702860B24000BADBD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		187384722860B24400BADBD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		187384752860B24400BADBD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		187384772860B24400BADBD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1873847C2860B24500BADBD2 /* Luni_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Luni_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		187384802860B24500BADBD2 /* Luni_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luni_AppTests.swift; sourceTree = "<group>"; };
+		187384862860B24500BADBD2 /* Luni_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Luni_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1873848A2860B24500BADBD2 /* Luni_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luni_AppUITests.swift; sourceTree = "<group>"; };
+		1873848C2860B24500BADBD2 /* Luni_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luni_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1873849C2860BEF900BADBD2 /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
+		1873849E2860C51400BADBD2 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		187384A028612F4600BADBD2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		187384A228614E3500BADBD2 /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		187384A428615B3F00BADBD2 /* FavoriteMeditations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMeditations.swift; sourceTree = "<group>"; };
+		187384A72861EA5800BADBD2 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-ExtraBold.otf"; path = "../../../../../../Downloads/Gilroy-FREE/Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
+		187384A82861EA5800BADBD2 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Light.otf"; path = "../../../../../../Downloads/Gilroy-FREE/Gilroy-Light.otf"; sourceTree = "<group>"; };
+		1BB3263A2D08510D3DDAA15D /* Pods-Luni_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luni_App.debug.xcconfig"; path = "Target Support Files/Pods-Luni_App/Pods-Luni_App.debug.xcconfig"; sourceTree = "<group>"; };
+		2B755A0E66BCAA959AC2298F /* Pods-Luni_App-Luni_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luni_App-Luni_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Luni_App-Luni_AppUITests/Pods-Luni_App-Luni_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5B6202CD0B03BB9A1AC6E03F /* Pods-Luni_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luni_App.release.xcconfig"; path = "Target Support Files/Pods-Luni_App/Pods-Luni_App.release.xcconfig"; sourceTree = "<group>"; };
+		B56502C2F70312143B968A45 /* Pods_Luni_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luni_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8A747328FE1397874025ED /* Pods_Luni_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luni_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8D7439ED8C6EEB2A4AC94B1 /* Pods-Luni_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luni_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Luni_AppTests/Pods-Luni_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7A75B431EA247479545800A /* Pods_Luni_App_Luni_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luni_App_Luni_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD665ED51D943BD665527CFB /* Pods-Luni_App-Luni_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luni_App-Luni_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Luni_App-Luni_AppUITests/Pods-Luni_App-Luni_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		187384632860B24000BADBD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3FAA185CC65BB4942DB4374 /* Pods_Luni_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187384792860B24500BADBD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C369EA01FC50F4EEE76319 /* Pods_Luni_AppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187384832860B24500BADBD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ECBB92A6C3A7412C1C5F0BA /* Pods_Luni_App_Luni_AppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1873845D2860B24000BADBD2 = {
+			isa = PBXGroup;
+			children = (
+				187384682860B24000BADBD2 /* Luni_App */,
+				1873847F2860B24500BADBD2 /* Luni_AppTests */,
+				187384892860B24500BADBD2 /* Luni_AppUITests */,
+				187384672860B24000BADBD2 /* Products */,
+				7C0020F6FFDF6CB21B2E6B4C /* Pods */,
+				8B81AE3EDBA571DDA188E20E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		187384672860B24000BADBD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				187384662860B24000BADBD2 /* Luni_App.app */,
+				1873847C2860B24500BADBD2 /* Luni_AppTests.xctest */,
+				187384862860B24500BADBD2 /* Luni_AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		187384682860B24000BADBD2 /* Luni_App */ = {
+			isa = PBXGroup;
+			children = (
+				187384A62861EA1900BADBD2 /* fonts */,
+				1873849B2860B2FF00BADBD2 /* ViewModel */,
+				1873849A2860B2A200BADBD2 /* View */,
+				187384992860B29700BADBD2 /* Model */,
+				187384692860B24000BADBD2 /* AppDelegate.swift */,
+				1873846B2860B24000BADBD2 /* SceneDelegate.swift */,
+				187384722860B24400BADBD2 /* Assets.xcassets */,
+				1873846F2860B24000BADBD2 /* Main.storyboard */,
+				187384742860B24400BADBD2 /* LaunchScreen.storyboard */,
+				187384772860B24400BADBD2 /* Info.plist */,
+			);
+			path = Luni_App;
+			sourceTree = "<group>";
+		};
+		1873847F2860B24500BADBD2 /* Luni_AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				187384802860B24500BADBD2 /* Luni_AppTests.swift */,
+			);
+			path = Luni_AppTests;
+			sourceTree = "<group>";
+		};
+		187384892860B24500BADBD2 /* Luni_AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1873848A2860B24500BADBD2 /* Luni_AppUITests.swift */,
+				1873848C2860B24500BADBD2 /* Luni_AppUITestsLaunchTests.swift */,
+			);
+			path = Luni_AppUITests;
+			sourceTree = "<group>";
+		};
+		187384992860B29700BADBD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				187384A228614E3500BADBD2 /* Meditation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1873849A2860B2A200BADBD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1873846D2860B24000BADBD2 /* HomeViewController.swift */,
+				1873849C2860BEF900BADBD2 /* PlusViewController.swift */,
+				1873849E2860C51400BADBD2 /* EmptyViewController.swift */,
+				187384A028612F4600BADBD2 /* FavoriteViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1873849B2860B2FF00BADBD2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				187384A428615B3F00BADBD2 /* FavoriteMeditations.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		187384A62861EA1900BADBD2 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				187384A72861EA5800BADBD2 /* Gilroy-ExtraBold.otf */,
+				187384A82861EA5800BADBD2 /* Gilroy-Light.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		7C0020F6FFDF6CB21B2E6B4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BB3263A2D08510D3DDAA15D /* Pods-Luni_App.debug.xcconfig */,
+				5B6202CD0B03BB9A1AC6E03F /* Pods-Luni_App.release.xcconfig */,
+				FD665ED51D943BD665527CFB /* Pods-Luni_App-Luni_AppUITests.debug.xcconfig */,
+				2B755A0E66BCAA959AC2298F /* Pods-Luni_App-Luni_AppUITests.release.xcconfig */,
+				E8D7439ED8C6EEB2A4AC94B1 /* Pods-Luni_AppTests.debug.xcconfig */,
+				089C02DF96D3AD23DA081D1B /* Pods-Luni_AppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8B81AE3EDBA571DDA188E20E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B56502C2F70312143B968A45 /* Pods_Luni_App.framework */,
+				F7A75B431EA247479545800A /* Pods_Luni_App_Luni_AppUITests.framework */,
+				DA8A747328FE1397874025ED /* Pods_Luni_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		187384652860B24000BADBD2 /* Luni_App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 187384902860B24500BADBD2 /* Build configuration list for PBXNativeTarget "Luni_App" */;
+			buildPhases = (
+				1EEA7BF8E463A715CC50DA13 /* [CP] Check Pods Manifest.lock */,
+				187384622860B24000BADBD2 /* Sources */,
+				187384632860B24000BADBD2 /* Frameworks */,
+				187384642860B24000BADBD2 /* Resources */,
+				F9CB7BD996734C5C6521AC83 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Luni_App;
+			productName = Luni_App;
+			productReference = 187384662860B24000BADBD2 /* Luni_App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1873847B2860B24500BADBD2 /* Luni_AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 187384932860B24500BADBD2 /* Build configuration list for PBXNativeTarget "Luni_AppTests" */;
+			buildPhases = (
+				9C4A16CABEC67AAB965DE830 /* [CP] Check Pods Manifest.lock */,
+				187384782860B24500BADBD2 /* Sources */,
+				187384792860B24500BADBD2 /* Frameworks */,
+				1873847A2860B24500BADBD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1873847E2860B24500BADBD2 /* PBXTargetDependency */,
+			);
+			name = Luni_AppTests;
+			productName = Luni_AppTests;
+			productReference = 1873847C2860B24500BADBD2 /* Luni_AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		187384852860B24500BADBD2 /* Luni_AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 187384962860B24500BADBD2 /* Build configuration list for PBXNativeTarget "Luni_AppUITests" */;
+			buildPhases = (
+				DBA9595741952D02B93939B8 /* [CP] Check Pods Manifest.lock */,
+				187384822860B24500BADBD2 /* Sources */,
+				187384832860B24500BADBD2 /* Frameworks */,
+				187384842860B24500BADBD2 /* Resources */,
+				B4A22335656C64F2630E987D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				187384882860B24500BADBD2 /* PBXTargetDependency */,
+			);
+			name = Luni_AppUITests;
+			productName = Luni_AppUITests;
+			productReference = 187384862860B24500BADBD2 /* Luni_AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1873845E2860B24000BADBD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					187384652860B24000BADBD2 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					1873847B2860B24500BADBD2 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 187384652860B24000BADBD2;
+					};
+					187384852860B24500BADBD2 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 187384652860B24000BADBD2;
+					};
+				};
+			};
+			buildConfigurationList = 187384612860B24000BADBD2 /* Build configuration list for PBXProject "Luni_App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1873845D2860B24000BADBD2;
+			productRefGroup = 187384672860B24000BADBD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				187384652860B24000BADBD2 /* Luni_App */,
+				1873847B2860B24500BADBD2 /* Luni_AppTests */,
+				187384852860B24500BADBD2 /* Luni_AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		187384642860B24000BADBD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187384762860B24400BADBD2 /* LaunchScreen.storyboard in Resources */,
+				187384732860B24400BADBD2 /* Assets.xcassets in Resources */,
+				187384712860B24000BADBD2 /* Main.storyboard in Resources */,
+				187384AA2861EA7500BADBD2 /* Gilroy-Light.otf in Resources */,
+				187384A92861EA7300BADBD2 /* Gilroy-ExtraBold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1873847A2860B24500BADBD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187384842860B24500BADBD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EEA7BF8E463A715CC50DA13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Luni_App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C4A16CABEC67AAB965DE830 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Luni_AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4A22335656C64F2630E987D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Luni_App-Luni_AppUITests/Pods-Luni_App-Luni_AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Luni_App-Luni_AppUITests/Pods-Luni_App-Luni_AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Luni_App-Luni_AppUITests/Pods-Luni_App-Luni_AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBA9595741952D02B93939B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Luni_App-Luni_AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9CB7BD996734C5C6521AC83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Luni_App/Pods-Luni_App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Luni_App/Pods-Luni_App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Luni_App/Pods-Luni_App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		187384622860B24000BADBD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1873846E2860B24000BADBD2 /* HomeViewController.swift in Sources */,
+				1873846A2860B24000BADBD2 /* AppDelegate.swift in Sources */,
+				1873849F2860C51400BADBD2 /* EmptyViewController.swift in Sources */,
+				1873849D2860BEF900BADBD2 /* PlusViewController.swift in Sources */,
+				187384A128612F4600BADBD2 /* FavoriteViewController.swift in Sources */,
+				187384A528615B3F00BADBD2 /* FavoriteMeditations.swift in Sources */,
+				187384A328614E3500BADBD2 /* Meditation.swift in Sources */,
+				1873846C2860B24000BADBD2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187384782860B24500BADBD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187384812860B24500BADBD2 /* Luni_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187384822860B24500BADBD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1873848D2860B24500BADBD2 /* Luni_AppUITestsLaunchTests.swift in Sources */,
+				1873848B2860B24500BADBD2 /* Luni_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1873847E2860B24500BADBD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 187384652860B24000BADBD2 /* Luni_App */;
+			targetProxy = 1873847D2860B24500BADBD2 /* PBXContainerItemProxy */;
+		};
+		187384882860B24500BADBD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 187384652860B24000BADBD2 /* Luni_App */;
+			targetProxy = 187384872860B24500BADBD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1873846F2860B24000BADBD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				187384702860B24000BADBD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		187384742860B24400BADBD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				187384752860B24400BADBD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1873848E2860B24500BADBD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1873848F2860B24500BADBD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		187384912860B24500BADBD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB3263A2D08510D3DDAA15D /* Pods-Luni_App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Luni_App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Boubakar-Dev.Luni-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		187384922860B24500BADBD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B6202CD0B03BB9A1AC6E03F /* Pods-Luni_App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Luni_App/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Boubakar-Dev.Luni-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		187384942860B24500BADBD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8D7439ED8C6EEB2A4AC94B1 /* Pods-Luni_AppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Boubakar-Dev.Luni-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Luni_App.app/Luni_App";
+			};
+			name = Debug;
+		};
+		187384952860B24500BADBD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 089C02DF96D3AD23DA081D1B /* Pods-Luni_AppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Boubakar-Dev.Luni-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Luni_App.app/Luni_App";
+			};
+			name = Release;
+		};
+		187384972860B24500BADBD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD665ED51D943BD665527CFB /* Pods-Luni_App-Luni_AppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Boubakar-Dev.Luni-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Luni_App;
+			};
+			name = Debug;
+		};
+		187384982860B24500BADBD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B755A0E66BCAA959AC2298F /* Pods-Luni_App-Luni_AppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Boubakar-Dev.Luni-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Luni_App;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		187384612860B24000BADBD2 /* Build configuration list for PBXProject "Luni_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1873848E2860B24500BADBD2 /* Debug */,
+				1873848F2860B24500BADBD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		187384902860B24500BADBD2 /* Build configuration list for PBXNativeTarget "Luni_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187384912860B24500BADBD2 /* Debug */,
+				187384922860B24500BADBD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		187384932860B24500BADBD2 /* Build configuration list for PBXNativeTarget "Luni_AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187384942860B24500BADBD2 /* Debug */,
+				187384952860B24500BADBD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		187384962860B24500BADBD2 /* Build configuration list for PBXNativeTarget "Luni_AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187384972860B24500BADBD2 /* Debug */,
+				187384982860B24500BADBD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1873845E2860B24000BADBD2 /* Project object */;
+}
