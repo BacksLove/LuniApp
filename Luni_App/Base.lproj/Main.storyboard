@@ -31,7 +31,7 @@
         <scene sceneID="Hlj-5T-dpN">
             <objects>
                 <navigationController id="uyw-un-msE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Vector" id="xln-9H-4hY"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeTab" id="xln-9H-4hY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YLK-vV-fxY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -64,7 +64,7 @@
         <scene sceneID="4x8-SQ-8IV">
             <objects>
                 <navigationController id="aiy-Xq-Jce" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Empty" image="Empty" id="YVP-Y2-xen">
+                    <tabBarItem key="tabBarItem" title="Empty" image="EmptyTab" id="YVP-Y2-xen">
                         <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tVp-EB-3RZ">
@@ -83,7 +83,7 @@
         <scene sceneID="htu-Ma-gm0">
             <objects>
                 <navigationController id="tAN-7R-FE2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Oval" id="qOW-Nu-9Ka">
+                    <tabBarItem key="tabBarItem" title="" image="PlusTab" id="qOW-Nu-9Ka">
                         <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iMA-nq-OfM">
@@ -132,9 +132,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Empty" width="26" height="21"/>
-        <image name="Oval" width="34" height="34"/>
-        <image name="Vector" width="22" height="21"/>
+        <image name="EmptyTab" width="25" height="21"/>
+        <image name="HomeTab" width="22" height="21"/>
+        <image name="PlusTab" width="37" height="36"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

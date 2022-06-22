@@ -10,45 +10,62 @@ import SnapKit
 
 class FavoriteViewController: UIViewController {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     let meditations = FavoriteMeditations.init()
+    
+    var topImageCollapsable: UIImageView!
     
     var favoriteTableView: UITableView!
     var titleLabel: UILabel!
     var courseLabel: UILabel!
     var descriptionLabel: UILabel!
+    var backButtonImage: UIImage!
     
+    var headerView: UIView!
     var separatorView: UIView!
     
-    // MARK: Birth and Death
+    // MARK: - Birth and Death
     
     override func loadView() {
         super.loadView()
         
+        self.headerView = UIView()
+        self.view.addSubview(self.headerView)
+        self.headerView.snp.makeConstraints { make in
+            make.height.equalTo(350)
+            make.top.leading.trailing.equalToSuperview()
+        }
+        
+        self.topImageCollapsable = UIImageView()
+        self.view.addSubview(self.topImageCollapsable)
+        self.topImageCollapsable.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+        }
+        
         self.titleLabel = UILabel()
-        self.view.addSubview(self.titleLabel)
+        self.headerView.addSubview(self.titleLabel)
         self.titleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(150)
+            make.top.equalTo(self.topImageCollapsable.snp.bottom).offset(50)
             make.leading.trailing.equalToSuperview().inset(20)
         }
         
         self.courseLabel = UILabel()
-        self.view.addSubview(self.courseLabel)
+        self.headerView.addSubview(self.courseLabel)
         self.courseLabel.snp.makeConstraints { make in
             make.top.equalTo(self.titleLabel.snp.bottom).offset(5)
             make.leading.trailing.equalToSuperview().inset(20)
         }
         
         self.descriptionLabel = UILabel()
-        self.view.addSubview(self.descriptionLabel)
+        self.headerView.addSubview(self.descriptionLabel)
         self.descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(self.courseLabel.snp.bottom).offset(25)
             make.leading.trailing.equalToSuperview().inset(20)
         }
         
         self.separatorView = UIView()
-        self.view.addSubview(self.separatorView)
+        self.headerView.addSubview(self.separatorView)
         self.separatorView.snp.makeConstraints { make in
             make.height.equalTo(1)
             make.top.equalTo(self.descriptionLabel.snp.bottom).offset(20)
@@ -58,9 +75,10 @@ class FavoriteViewController: UIViewController {
         self.favoriteTableView = UITableView()
         self.view.addSubview(self.favoriteTableView)
         self.favoriteTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.separatorView.snp.bottom).offset(20)
-            make.trailing.leading.bottom.equalToSuperview().inset(20)
+            make.top.equalTo(self.headerView.snp.bottom)
+            make.trailing.bottom.leading.equalToSuperview().inset(20)
         }
+        
         
     }
     
@@ -69,6 +87,16 @@ class FavoriteViewController: UIViewController {
         
         // Favorite View
         self.view.backgroundColor = UIColor(red: 255/255, green: 147/255, blue: 150/255, alpha: 1)
+        
+        // Header View
+        
+        // ScrollView
+        self.headerViewHeight = NSLayoutConstraint(item: self.headerView as UIView, attribute: .height, relatedBy: .equal, toItem: self.headerView, attribute: .height, multiplier: 1, constant: 0)
+        //self.headerViewHeight = view.heightAnchor.constraint(equalToConstant: 100)
+        
+        // Top Image Collapsable
+        self.topImageCollapsable.image = UIImage(named: "FavoriteTopImage")
+        self.topImageCollapsable.contentMode = .scaleToFill
         
         // Title label
         self.titleLabel.text = meditations.title
@@ -93,17 +121,17 @@ class FavoriteViewController: UIViewController {
         self.favoriteTableView.separatorStyle = .none
         self.favoriteTableView.backgroundColor = UIColor(red: 255/255, green: 147/255, blue: 150/255, alpha: 1)
         self.favoriteTableView.dataSource = self
+        self.favoriteTableView.delegate = self
         self.favoriteTableView.register(FavoriteCustomCell.self, forCellReuseIdentifier: FavoriteCustomCell.identifier)
         self.favoriteTableView.rowHeight = 50
         
     }
     
-    // MARK: Action
     
     
 }
 
-extension FavoriteViewController: UITableViewDataSource {
+extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -119,8 +147,6 @@ extension FavoriteViewController: UITableViewDataSource {
         return cell
         
     }
-    
-    
     
 }
 
@@ -151,7 +177,7 @@ class FavoriteCustomCell : UITableViewCell {
         
         self.backgroundColor = .clear
         
-        self.playImageView.image = UIImage(named: "Oval")
+        self.playImageView.image = UIImage(named: "PlayIcon")
         self.playImageView.contentMode = .scaleAspectFit
         self.addSubview(self.playImageView)
         self.playImageView.snp.makeConstraints { make in
@@ -188,9 +214,9 @@ class FavoriteCustomCell : UITableViewCell {
         self.titleLabel.text = title
         self.levelLabel.text = level.rawValue
         if status {
-            favoriteImageView.image = UIImage(named: "love")
+            favoriteImageView.image = UIImage(named: "LikeIcon")
         } else {
-            favoriteImageView.image = UIImage(named: "love")
+            favoriteImageView.image = UIImage(named: "LikeIcon")
         }
         self.initialize()
     }

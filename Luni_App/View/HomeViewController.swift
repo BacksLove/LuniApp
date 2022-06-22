@@ -68,8 +68,8 @@ class HomeViewController: UIViewController {
         
         // Favorite Button View
         self.favoriteButtonView.layer.cornerRadius = 10
-        self.favoriteButtonView.backgroundColor = UIColor(patternImage: UIImage(named: "Favorite")!)
-        self.favoriteButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showFavoriteScreen)))
+        self.favoriteButtonView.backgroundColor = UIColor(patternImage: UIImage(named: "FavoriteBackground")!)
+        self.favoriteButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openFavoriteScreen)))
         
         // Favorite Text View
         
@@ -83,14 +83,14 @@ class HomeViewController: UIViewController {
         self.favoriteButtonCourse.textColor = .white
         
         // Favorite Icon
-        self.favoriteButtonIcon.image = UIImage(named: "Oval")
+        self.favoriteButtonIcon.image = UIImage(named: "FavoriteIcon")
         self.favoriteButtonIcon.contentMode = .scaleAspectFit
         
     }
     
     // MARK: Action
     
-    @objc func showFavoriteScreen() {
+    @objc func openFavoriteScreen() {
         let favoriteViewController = FavoriteViewController()
         self.navigationController?.pushViewController(favoriteViewController, animated: true)
     }
