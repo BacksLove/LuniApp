@@ -10,6 +10,14 @@ import SnapKit
 
 class FavoriteViewController: UIViewController {
     
+    // MARK: - TEST Properties
+    
+    let maxHeaderHeight: CGFloat = 220
+    let minHeaderHeight: CGFloat = 80
+    var previousScrollOffset: CGFloat = 0
+    
+    var headerViewHeight: NSLayoutConstraint!
+    
     // MARK: - Properties
     
     let meditations = FavoriteMeditations.init()
@@ -148,6 +156,41 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+}
+
+// MARK: - TEST COLLAPSE
+
+extension FavoriteViewController {
+    
+    func canAnimateHeader (_ scrollView: UIScrollView) -> Bool {
+        print("Step 1")
+        let scrollViewMaxHeight = scrollView.frame.height + self.headerViewHeight.constant - minHeaderHeight
+        return scrollView.contentSize.height > scrollViewMaxHeight
+    }
+    func setScrollPosition() {
+        print("Step 2")
+        self.favoriteTableView.contentOffset = CGPoint(x:0, y: 0)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("Step 3")
+        let scrollDiff = (scrollView.contentOffset.y - previousScrollOffset)
+        let isScrollingDown = scrollDiff > 0
+        let isScrollingUp = scrollDiff < 0
+        if canAnimateHeader(scrollView) {
+            var newHeight = headerViewHeight.constant
+            if isScrollingDown {
+                newHeight = max(minHeaderHeight, headerViewHeight.constant - abs(scrollDiff))
+            } else if isScrollingUp {
+                newHeight = min(maxHeaderHeight, headerViewHeight.constant + abs(scrollDiff))
+            }
+            if newHeight != headerViewHeight.constant {
+                headerViewHeight.constant = newHeight
+                setScrollPosition()
+                previousScrollOffset = scrollView.contentOffset.y
+            }
+        }
+    }
 }
 
 
