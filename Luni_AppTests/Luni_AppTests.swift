@@ -46,6 +46,10 @@ class Luni_AppTests: XCTestCase {
         
         XCTAssertEqual(meditation.title, "Favorite meditations")
         XCTAssertEqual(meditation.courseNumber, 7)
+        XCTAssertEqual(meditation.meditationsList[0].title, "Brief beginner meditation")
+        XCTAssertEqual(meditation.meditationsList[0].level, Level.BEGINNER)
+        XCTAssertEqual(meditation.meditationsList[1].title, "Inner breath and mindfullness")
+        XCTAssertEqual(meditation.meditationsList[1].level, Level.ADVANCED)
         
     }
 
