@@ -10,83 +10,91 @@ import SnapKit
 
 class FavoriteViewController: UIViewController {
     
-    // MARK: - TEST Properties
+    // MARK: - Properties
     
-    let maxHeaderHeight: CGFloat = 220
+    /// View Model
+    let meditations = FavoriteMeditations.init()
+    
+    let topImageCollapsable =  UIImageView()
+    var favoriteTableView = UITableView()
+    var titleLabel = UILabel()
+    var courseLabel = UILabel()
+    var descriptionLabel = UILabel()
+    var backButtonImage = UIImage()
+    
+    /// Views
+    var headerView = UIView()
+    var separatorView = UIView()
+    
+    /// View properties
+    let maxHeaderHeight: CGFloat = 350
     let minHeaderHeight: CGFloat = 80
     var previousScrollOffset: CGFloat = 0
     
+    /// Constraints
     var headerViewHeight: NSLayoutConstraint!
+    var constraints = [NSLayoutConstraint]()
     
-    // MARK: - Properties
-    
-    let meditations = FavoriteMeditations.init()
-    
-    var topImageCollapsable: UIImageView!
-    
-    var favoriteTableView: UITableView!
-    var titleLabel: UILabel!
-    var courseLabel: UILabel!
-    var descriptionLabel: UILabel!
-    var backButtonImage: UIImage!
-    
-    var headerView: UIView!
-    var separatorView: UIView!
     
     // MARK: - Birth and Death
     
     override func loadView() {
         super.loadView()
         
-        self.headerView = UIView()
+        // Header View
         self.view.addSubview(self.headerView)
-        self.headerView.snp.makeConstraints { make in
-            make.height.equalTo(350)
-            make.top.leading.trailing.equalToSuperview()
-        }
+        self.headerView.translatesAutoresizingMaskIntoConstraints = false
+        self.constraints.append(self.headerView.topAnchor.constraint(equalTo: self.view.topAnchor))
+        self.constraints.append(self.headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor))
+        self.constraints.append(self.headerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor))
+        self.headerViewHeight = self.headerView.heightAnchor.constraint(equalToConstant: 350)
+        self.headerViewHeight.isActive = true
         
-        self.topImageCollapsable = UIImageView()
-        self.view.addSubview(self.topImageCollapsable)
-        self.topImageCollapsable.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
-        }
+        // Image at the top
+        self.headerView.addSubview(self.topImageCollapsable)
+        self.topImageCollapsable.translatesAutoresizingMaskIntoConstraints = false
+        self.constraints.append(self.topImageCollapsable.topAnchor.constraint(equalTo: self.headerView.topAnchor))
+        self.constraints.append(self.topImageCollapsable.leadingAnchor.constraint(equalTo: self.headerView.leadingAnchor))
+        self.constraints.append(self.topImageCollapsable.trailingAnchor.constraint(equalTo: self.headerView.trailingAnchor))
         
-        self.titleLabel = UILabel()
+        // Favorite Title View
         self.headerView.addSubview(self.titleLabel)
-        self.titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.topImageCollapsable.snp.bottom).offset(50)
-            make.leading.trailing.equalToSuperview().inset(20)
-        }
+        self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.constraints.append(self.titleLabel.topAnchor.constraint(equalTo: self.topImageCollapsable.bottomAnchor, constant: 50))
+        self.constraints.append(self.titleLabel.leadingAnchor.constraint(equalTo: self.headerView.leadingAnchor, constant: 20))
+        self.constraints.append(self.titleLabel.trailingAnchor.constraint(equalTo: self.headerView.trailingAnchor, constant: -20))
         
-        self.courseLabel = UILabel()
+        // Favorite Course View
         self.headerView.addSubview(self.courseLabel)
-        self.courseLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.titleLabel.snp.bottom).offset(5)
-            make.leading.trailing.equalToSuperview().inset(20)
-        }
+        self.courseLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.constraints.append(self.courseLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 5))
+        self.constraints.append(self.courseLabel.leadingAnchor.constraint(equalTo: self.headerView.leadingAnchor, constant: 20))
+        self.constraints.append(self.courseLabel.trailingAnchor.constraint(equalTo: self.headerView.trailingAnchor, constant: -20))
         
-        self.descriptionLabel = UILabel()
+        // Favorite Description View
         self.headerView.addSubview(self.descriptionLabel)
-        self.descriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.courseLabel.snp.bottom).offset(25)
-            make.leading.trailing.equalToSuperview().inset(20)
-        }
+        self.descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.constraints.append(self.descriptionLabel.topAnchor.constraint(equalTo: self.courseLabel.bottomAnchor, constant: 25))
+        self.constraints.append(self.descriptionLabel.leadingAnchor.constraint(equalTo: self.headerView.leadingAnchor, constant: 20))
+        self.constraints.append(self.descriptionLabel.trailingAnchor.constraint(equalTo: self.headerView.trailingAnchor, constant: -20))
         
-        self.separatorView = UIView()
+        // Favorite Separator View
         self.headerView.addSubview(self.separatorView)
-        self.separatorView.snp.makeConstraints { make in
-            make.height.equalTo(1)
-            make.top.equalTo(self.descriptionLabel.snp.bottom).offset(20)
-            make.trailing.leading.equalToSuperview().inset(20)
-        }
+        self.separatorView.translatesAutoresizingMaskIntoConstraints = false
+        self.constraints.append(self.separatorView.topAnchor.constraint(equalTo: self.descriptionLabel.bottomAnchor, constant: 20))
+        self.constraints.append(self.separatorView.leadingAnchor.constraint(equalTo: self.headerView.leadingAnchor, constant: 20))
+        self.constraints.append(self.separatorView.trailingAnchor.constraint(equalTo: self.headerView.trailingAnchor, constant: -20))
+        self.constraints.append(self.separatorView.heightAnchor.constraint(equalToConstant: 1))
         
-        self.favoriteTableView = UITableView()
+        // Favorite TableView
         self.view.addSubview(self.favoriteTableView)
-        self.favoriteTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.headerView.snp.bottom)
-            make.trailing.bottom.leading.equalToSuperview().inset(20)
-        }
+        self.favoriteTableView.translatesAutoresizingMaskIntoConstraints = false
+        self.constraints.append(self.favoriteTableView.topAnchor.constraint(equalTo: self.headerView.bottomAnchor, constant: 20))
+        self.constraints.append(self.favoriteTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor))
+        self.constraints.append(self.favoriteTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor))
+        self.constraints.append(self.favoriteTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor))
         
+        NSLayoutConstraint.activate(self.constraints)
         
     }
     
@@ -95,12 +103,6 @@ class FavoriteViewController: UIViewController {
         
         // Favorite View
         self.view.backgroundColor = UIColor(red: 255/255, green: 147/255, blue: 150/255, alpha: 1)
-        
-        // Header View
-        
-        // ScrollView
-        self.headerViewHeight = NSLayoutConstraint(item: self.headerView as UIView, attribute: .height, relatedBy: .equal, toItem: self.headerView, attribute: .height, multiplier: 1, constant: 0)
-        //self.headerViewHeight = view.heightAnchor.constraint(equalToConstant: 100)
         
         // Top Image Collapsable
         self.topImageCollapsable.image = UIImage(named: "FavoriteTopImage")
@@ -133,11 +135,14 @@ class FavoriteViewController: UIViewController {
         self.favoriteTableView.register(FavoriteCustomCell.self, forCellReuseIdentifier: FavoriteCustomCell.identifier)
         self.favoriteTableView.rowHeight = 50
         
+        // Back Button
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", image: UIImage(named: "BackButton"))
+        
     }
     
-    
-    
 }
+
+// MARK: - TableView
 
 extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -158,117 +163,44 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 
-// MARK: - TEST COLLAPSE
+// MARK: - Collapsing functions
 
 extension FavoriteViewController {
     
     func canAnimateHeader (_ scrollView: UIScrollView) -> Bool {
-        print("Step 1")
         let scrollViewMaxHeight = scrollView.frame.height + self.headerViewHeight.constant - minHeaderHeight
         return scrollView.contentSize.height > scrollViewMaxHeight
     }
     func setScrollPosition() {
-        print("Step 2")
         self.favoriteTableView.contentOffset = CGPoint(x:0, y: 0)
     }
     
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("Step 3")
         let scrollDiff = (scrollView.contentOffset.y - previousScrollOffset)
         let isScrollingDown = scrollDiff > 0
         let isScrollingUp = scrollDiff < 0
         if canAnimateHeader(scrollView) {
-            var newHeight = headerViewHeight.constant
+            var newHeight = self.headerViewHeight.constant
             if isScrollingDown {
-                newHeight = max(minHeaderHeight, headerViewHeight.constant - abs(scrollDiff))
+                newHeight = max(minHeaderHeight, self.headerViewHeight.constant - abs(scrollDiff))
             } else if isScrollingUp {
-                newHeight = min(maxHeaderHeight, headerViewHeight.constant + abs(scrollDiff))
+                newHeight = min(maxHeaderHeight, self.headerViewHeight.constant + abs(scrollDiff))
             }
-            if newHeight != headerViewHeight.constant {
-                headerViewHeight.constant = newHeight
+            if newHeight != self.headerViewHeight.constant {
+                self.headerViewHeight.constant = newHeight
                 setScrollPosition()
                 previousScrollOffset = scrollView.contentOffset.y
             }
+            if newHeight == self.minHeaderHeight {
+                self.topImageCollapsable.isHidden = true
+                self.navigationItem.title = "Favorite meditations"
+                
+            } else {
+                self.topImageCollapsable.isHidden = false
+                self.navigationItem.title = ""
+            }
         }
-    }
-}
-
-
-class FavoriteCustomCell : UITableViewCell {
-    
-    // MARK: Properties
-    
-    static let identifier = "FavoriteTableViewCell"
-    
-    let playImageView = UIImageView()
-    let titleLabel = UILabel()
-    let levelLabel = UILabel()
-    let favoriteImageView = UIImageView()
-    
-    // MARK: Birth and Death
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.initialize()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    private func initialize() {
-        
-        self.backgroundColor = .clear
-        
-        self.playImageView.image = UIImage(named: "PlayIcon")
-        self.playImageView.contentMode = .scaleAspectFit
-        self.addSubview(self.playImageView)
-        self.playImageView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().inset(5)
-            make.centerY.equalToSuperview()
-        }
-        
-        self.titleLabel.textColor = .white
-        self.titleLabel.font = UIFont(name: "Gilroy-ExtraBold", size: UIFont.labelFontSize)
-        self.addSubview(self.titleLabel)
-        self.titleLabel.snp.makeConstraints { make in
-            make.leading.equalTo(self.playImageView.snp.trailing).offset(10)
-            make.top.equalToSuperview().inset(10)
-        }
-        
-        self.levelLabel.textColor = .white
-        self.levelLabel.font = UIFont(name: "Gilroy-Light", size: UIFont.labelFontSize)
-        self.addSubview(self.levelLabel)
-        self.levelLabel.snp.makeConstraints { make in
-            make.leading.equalTo(self.playImageView.snp.trailing).offset(10)
-            make.bottom.equalToSuperview().inset(5)
-        }
-    
-        self.favoriteImageView.contentMode = .scaleAspectFit
-        self.addSubview(self.favoriteImageView)
-        self.favoriteImageView.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.trailing.equalToSuperview().inset(15)
-        }
-        
-    }
-    
-    func configure(title: String, level: Level, status: Bool) {
-        self.titleLabel.text = title
-        self.levelLabel.text = level.rawValue
-        if status {
-            favoriteImageView.image = UIImage(named: "LikeIcon")
-        } else {
-            favoriteImageView.image = UIImage(named: "LikeIcon")
-        }
-        self.initialize()
-    }
-    
-    override func prepareForReuse() {
-        self.playImageView.image = nil
-        self.titleLabel.text = nil
-        self.levelLabel.text = nil
-        self.favoriteImageView.image = nil
     }
     
 }

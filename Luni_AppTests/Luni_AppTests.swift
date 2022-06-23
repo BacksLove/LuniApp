@@ -32,5 +32,21 @@ class Luni_AppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func test_home() throws {
+        let homeViewModel = HomeViewModel()
+        
+        XCTAssertEqual(homeViewModel.favoriteTitle, "Favorite meditations")
+        XCTAssertEqual(homeViewModel.favoriteCourse, "10 Courses")
+    }
+    
+    func test_favorite() throws {
+        
+        let meditation = FavoriteMeditations.init()
+        
+        XCTAssertEqual(meditation.title, "Favorite meditations")
+        XCTAssertEqual(meditation.courseNumber, 7)
+        
+    }
 
 }

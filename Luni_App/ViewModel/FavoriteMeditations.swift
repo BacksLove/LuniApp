@@ -39,6 +39,28 @@ struct FavoriteMeditations {
         meditations.append(meditation4)
         meditations.append(meditation5)
         
+        meditations.append(meditation1)
+        meditations.append(meditation2)
+        meditations.append(meditation3)
+        meditations.append(meditation4)
+        meditations.append(meditation5)
+        meditations.append(meditation1)
+        meditations.append(meditation2)
+        meditations.append(meditation3)
+        meditations.append(meditation4)
+        meditations.append(meditation5)
+        meditations.append(meditation1)
+        meditations.append(meditation2)
+        meditations.append(meditation3)
+        meditations.append(meditation4)
+        meditations.append(meditation5)
+        meditations.append(meditation1)
+        meditations.append(meditation2)
+        meditations.append(meditation3)
+        meditations.append(meditation4)
+        meditations.append(meditation5)
+        
+        
         return meditations
     }
 }

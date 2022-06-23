@@ -6,8 +6,7 @@ target 'Luni_App' do
   use_frameworks!
 
   # Pods for Luni_App
-  pod 'SnapKit', '~> 5.6.0'
-
+  
   target 'Luni_AppTests' do
     inherit! :search_paths
     # Pods for testing

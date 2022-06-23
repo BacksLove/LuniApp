@@ -6,58 +6,64 @@
 //
 
 import UIKit
-import SnapKit
 
 class HomeViewController: UIViewController {
 
     // MARK: Properties
     
-    var favoriteButtonView: UIView!
-    var favoriteButtonTitle: UILabel!
-    var favoriteButtonCourse: UILabel!
-    var favoriteButtonIcon: UIImageView!
-    var favoriteButtonSubView: UIView!
+    let favoriteButtonView = UIView()
+    let favoriteButtonTitle =  UILabel()
+    let favoriteButtonCourse = UILabel()
+    let favoriteButtonIcon = UIImageView()
+    let favoriteButtonSubView = UIView()
+    
+    /// Array of view constraints
+    var constraint = [NSLayoutConstraint]()
+    
+    /// ViewModel
+    let homeViewModel = HomeViewModel()
     
     // MARK: Birth and Death
     
     override func loadView() {
         super.loadView()
         
-        self.favoriteButtonView = UIView()
+        // Favorited Card View
         self.view.addSubview(self.favoriteButtonView)
-        self.favoriteButtonView.snp.makeConstraints { make in
-            make.width.equalTo(300)
-            make.height.equalTo(150)
-            make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().inset(100)
-        }
+        self.favoriteButtonView.translatesAutoresizingMaskIntoConstraints = false
+        self.constraint.append(self.favoriteButtonView.widthAnchor.constraint(equalToConstant: 300))
+        self.constraint.append(self.favoriteButtonView.heightAnchor.constraint(equalToConstant: 150))
+        self.constraint.append(self.favoriteButtonView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor))
+        self.constraint.append(self.favoriteButtonView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -100))
         
-        self.favoriteButtonSubView = UIView()
+        // Favorite Stack View
         self.favoriteButtonView.addSubview(self.favoriteButtonSubView)
-        self.favoriteButtonSubView.snp.makeConstraints { make in
-            make.leading.trailing.bottom.equalToSuperview().inset(10)
-        }
+        self.favoriteButtonSubView.translatesAutoresizingMaskIntoConstraints = false
+        self.constraint.append(self.favoriteButtonSubView.leadingAnchor.constraint(equalTo: self.favoriteButtonView.leadingAnchor, constant: 10))
+        self.constraint.append(self.favoriteButtonSubView.trailingAnchor.constraint(equalTo: self.favoriteButtonView.trailingAnchor, constant: -10))
+        self.constraint.append(self.favoriteButtonSubView.bottomAnchor.constraint(equalTo: self.favoriteButtonView.bottomAnchor, constant: -10))
         
-        self.favoriteButtonTitle = UILabel()
+        // Favorite Title View
         self.favoriteButtonSubView.addSubview(self.favoriteButtonTitle)
-        self.favoriteButtonTitle.snp.makeConstraints { make in
-            make.leading.top.equalToSuperview().inset(5)
-        }
+        self.favoriteButtonTitle.translatesAutoresizingMaskIntoConstraints = false
+        self.constraint.append(self.favoriteButtonTitle.leadingAnchor.constraint(equalTo: self.favoriteButtonSubView.leadingAnchor, constant: 5))
+        self.constraint.append(self.favoriteButtonTitle.topAnchor.constraint(equalTo: self.favoriteButtonSubView.topAnchor, constant: 5))
         
-        self.favoriteButtonCourse = UILabel()
+        // Favoire Courses View
         self.favoriteButtonSubView.addSubview(self.favoriteButtonCourse)
-        self.favoriteButtonCourse.snp.makeConstraints { make in
-            make.top.equalTo(self.favoriteButtonTitle.snp.bottom).offset(5)
-            make.leading.equalToSuperview().inset(5)
-        }
+        self.favoriteButtonCourse.translatesAutoresizingMaskIntoConstraints = false
+        self.constraint.append(self.favoriteButtonCourse.topAnchor.constraint(equalTo: self.favoriteButtonTitle.bottomAnchor, constant: -5))
+        self.constraint.append(self.favoriteButtonCourse.leadingAnchor.constraint(equalTo: self.favoriteButtonSubView.leadingAnchor, constant: 5))
         
-        self.favoriteButtonIcon = UIImageView()
+        // Favorite Icon View
         self.favoriteButtonSubView.addSubview(self.favoriteButtonIcon)
-        self.favoriteButtonIcon.snp.makeConstraints { make in
-            make.height.width.equalTo(34)
-            make.top.trailing.bottom.equalToSuperview().inset(5)
-        }
+        self.favoriteButtonIcon.translatesAutoresizingMaskIntoConstraints = false
+        self.constraint.append(self.favoriteButtonIcon.topAnchor.constraint(equalTo: self.favoriteButtonSubView.topAnchor, constant: 5))
+        self.constraint.append(self.favoriteButtonIcon.trailingAnchor.constraint(equalTo: self.favoriteButtonSubView.trailingAnchor, constant: -5))
+        self.constraint.append(self.favoriteButtonIcon.bottomAnchor.constraint(equalTo: self.favoriteButtonSubView.bottomAnchor, constant: -5))
+        self.constraint.append(self.favoriteButtonIcon.heightAnchor.constraint(equalToConstant: 34))
         
+        NSLayoutConstraint.activate(self.constraint)
     }
     
     override func viewDidLoad() {
@@ -68,28 +74,29 @@ class HomeViewController: UIViewController {
         
         // Favorite Button View
         self.favoriteButtonView.layer.cornerRadius = 10
-        self.favoriteButtonView.backgroundColor = UIColor(patternImage: UIImage(named: "FavoriteBackground")!)
+        self.favoriteButtonView.backgroundColor = UIColor(patternImage: UIImage(named: homeViewModel.favoriteBackground)!)
         self.favoriteButtonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openFavoriteScreen)))
         
-        // Favorite Text View
-        
-        
         // Favorite Title
-        self.favoriteButtonTitle.text = "Favorite meditations"
+        self.favoriteButtonTitle.text = homeViewModel.favoriteTitle
+        self.favoriteButtonTitle.font = UIFont(name: "Gilroy-ExtraBold", size: UIFont.labelFontSize)
         self.favoriteButtonTitle.textColor = .white
         
         // Favorite Courses
-        self.favoriteButtonCourse.text = "10 Courses"
+        self.favoriteButtonCourse.text = homeViewModel.favoriteCourse
+        self.favoriteButtonCourse.font = UIFont(name: "Gilroy-Light", size: 15)
         self.favoriteButtonCourse.textColor = .white
         
         // Favorite Icon
-        self.favoriteButtonIcon.image = UIImage(named: "FavoriteIcon")
+        self.favoriteButtonIcon.image = UIImage(named: homeViewModel.favoriteIcon)
         self.favoriteButtonIcon.contentMode = .scaleAspectFit
         
     }
     
     // MARK: Action
     
+    
+    // Show Favorite Screen
     @objc func openFavoriteScreen() {
         let favoriteViewController = FavoriteViewController()
         self.navigationController?.pushViewController(favoriteViewController, animated: true)
